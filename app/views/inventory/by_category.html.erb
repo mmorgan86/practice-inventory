@@ -1,0 +1,11 @@
+<% category = 'electronics' %>
+
+<h1><%= category.capitalize %> Products </h1>
+
+<ul> 
+  <% Product.where(category: category).each do |product| %>
+  <li>
+    <%= product.name %>, <%= number_to_currency product.price %>
+  </li>
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h1>All Products</h1>
+
+
+<ul> 
+  <% Product.all.each do |product| %>
+  <li>
+    <%= product.name %>, <%= number_to_currency product.price %>
+  </li>
+  <% end %>
+</ul>
+
